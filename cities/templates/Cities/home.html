@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Город{% endblock %}
+
+{% block content %} 
+    
+    <h1 class="display-4">Городa</h1>
+      <div class="row">
+        <div class='col-md-6'> 
+          {% for object in objects_list %}
+                 <p>{{object.name}} </p>
+          {% endfor %}
+        </div>
+    </div>
+<form action="" method="POST"> {% csrf_token %}
+  Город:<br>
+  <input type="text" name="name"><br>
+  <input type="submit"  value="Сохранить"><br>
+
+</form> 
+
+
+{% endblock %}
